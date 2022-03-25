@@ -7,10 +7,14 @@ if ((key <= 0) || (key >= 27) || (isNaN(key))) {
   document.write('Invalid key, please enter a number between 1 and 26');
 } else {
   for (var i = 0; i < sentence.length; i++) {
-    var c = sentence[i];
-    var id = alphabet.indexOf(c) + key;
-    c = alphabet[id % 26];
-    result += c;
+    if (c === ' ') {
+      result += c;
+    } else {
+      var c = sentence[i];
+      var id = alphabet.indexOf(c) + key;
+      c = alphabet[id % 26];
+      result += c;
+    }
   }
 }
 
