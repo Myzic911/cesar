@@ -1,7 +1,7 @@
-var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' '];
 var mode = prompt('You want to encrypt or decrypt a text ?\n\n1 for encrypt\n2 for decrypt');
 
 if (mode === '1') {
+  var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' '];
   var sentence = prompt('Enter the text you want to encrypt').split('');
   var key = Number(prompt('Enter the key you want to use for encrypt your text'));
   var result = '';
@@ -21,8 +21,9 @@ if (mode === '1') {
     }
   }
 
-  document.write(result);
+  document.write(result.toUpperCase());
 } else if (mode === '2') {
+  var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' '];
   var sentence = prompt('Enter the text you want to decrypt').split('');
   var key = Number(prompt('Enter the key to decrypt the text'));
   var result = '';
@@ -42,5 +43,5 @@ if (mode === '1') {
     }
   }
 
-  document.write(result);
+  document.write(result.toLowerCase());
 }
